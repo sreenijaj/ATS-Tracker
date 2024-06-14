@@ -49,8 +49,8 @@ if uploaded_file is not None:
     st.write("PDF Uploaded Successfully")
     
 submit1 = st.button("Tell Me About The Resume")
-## submit2 = st.button("How Can I Improve my Skills")
-## submit3 = st.button("Provide Missing Keywords")
+submit2 = st.button("Provide Missing Keywords")
+submit3 = st.button("Enhance my Resume")
 submit4 = st.button("Percentage Match")
 
 input_prompt1 = """
@@ -58,13 +58,13 @@ you are an experienced HR with technical experience in the field of Software Dev
 please share your professional evaluation on whether the applicant's profile aligns with the job description.
 Highlight the strength and weaknesses of the applicant in relation to the specific job role
 """
-## input_prompt2 = """
-## You are an Technical HR with expertise in Software Development , Data Science , Big Data Engineering, DEVOPS,Data analyst , Full stack web development,
-## your role is to scrutinize the resume in the light of the job description provided.
-## Share your insights on canditate's suitability for the role from HR perspective.
-## Additionally offer advice on enhancing the applicant's skills and identify areas required with the improvement.
-## """
-
+input_prompt2 = """
+As an advanced ATS (Applicant Tracking System) with expertise in the tech industry, specifically in areas such as Software Development, 
+Data Science, Big Data Engineering, DevOps, Data Analysis, and Full Stack Web Development, review the uploaded resume in light of the 
+job description provided. Offer actionable suggestions on how the applicant can enhance their resume. Focus on additional skills to acquire, 
+certifications, experiences to gain, or specific achievements to highlight that would make the resume more attractive for this role. 
+Provide guidance on how to structure the resume to better reflect the applicant's qualifications for the job.
+"""
 
 input_prompt3 = """
 You are an skilled ATS (Applicant Tracking System) scanner with a deep understanding of Software Development , Data Science , Big Data Engineering, DEVOPS,Data analyst , Full stack web development  and ATS functionality, 
@@ -80,6 +80,14 @@ if submit1:
         st.write(response)
     else:
         st.write("Please Upload the Resume")
+elif submit3:
+    if uploaded_file is not None:
+        pdf_content = input_pdf_setup(uploaded_file)
+        response = get_gemini_response(input_prompt2_enhancement, pdf_content, input_text)
+        st.subheader("Resume Enhancement Suggestions")
+        st.write(response)
+    else:
+        st.write("Please upload your resume to get enhancement suggestions.")
 
 elif submit4:
     if uploaded_file is not None:
