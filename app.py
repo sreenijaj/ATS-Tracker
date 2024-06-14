@@ -58,12 +58,12 @@ you are an experienced HR with technical experience in the field of Software Dev
 please share your professional evaluation on whether the applicant's profile aligns with the job description.
 Highlight the strength and weaknesses of the applicant in relation to the specific job role
 """
-input_prompt2 = """
-You are an Technical HR with expertise in Software Development , Data Science , Big Data Engineering, DEVOPS,Data analyst , Full stack web development,
-your role is to scrutinize the resume in the light of the job description provided.
-Share your insights on canditate's suitability for the role from HR perspective.
-Additionally offer advice on enhancing the applicant's skills and identify areas required with the improvement.
-"""
+## input_prompt2 = """
+## You are an Technical HR with expertise in Software Development , Data Science , Big Data Engineering, DEVOPS,Data analyst , Full stack web development,
+## your role is to scrutinize the resume in the light of the job description provided.
+## Share your insights on canditate's suitability for the role from HR perspective.
+## Additionally offer advice on enhancing the applicant's skills and identify areas required with the improvement.
+## """
 
 
 input_prompt3 = """
