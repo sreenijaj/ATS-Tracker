@@ -69,7 +69,7 @@ Provide guidance on how to structure the resume to better reflect the applicant'
 input_prompt3 = """
 You are an skilled ATS (Applicant Tracking System) scanner with a deep understanding of Software Development , Data Science , Big Data Engineering, DEVOPS,Data analyst , Full stack web development  and ATS functionality, 
 your task is to evaluate the resume against the provided job description. give me the percentage of match if the resume matches
-the job description. First the output should come as percentage and then keywords missing and last final thoughts.
+the job description. First the output should come as percentage and then last final thoughts.
 """
 
 if submit1:
