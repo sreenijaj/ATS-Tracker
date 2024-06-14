@@ -1,5 +1,6 @@
+heroku buildpacks:add --index 1 heroku-community/apt
 streamlit
 google-generativeai
 python-dotenv
-pdf2image
-poppler
+pdf2image == 1.16.0 
+
