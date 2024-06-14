@@ -72,6 +72,17 @@ your task is to evaluate the resume against the provided job description. give m
 the job description. First the output should come as percentage and then last final thoughts.
 """
 
+input_prompt4 = """
+As a highly experienced ATS with an intricate understanding of recruitment processes in tech industries, 
+including Software Development, Data Science, Big Data Engineering, DevOps, Data Analysis, and Full Stack Web Development, 
+your task is to meticulously analyze the uploaded resume against the provided job description. Your goal is to identify any 
+critical skills, keywords, or qualifications mentioned in the job description that are not present in the resume. List these 
+missing elements in a clear and structured format, providing straightforward feedback that the applicant can use to align their 
+resume more closely with the job expectations. This analysis will help the candidate understand which areas of expertise or 
+keywords they might need to highlight or add to their resume to improve their chances of being noticed and considered for the role.
+
+"""
+
 if submit1:
     if uploaded_file is not None:
         pdf_content=input_pdf_setup(uploaded_file)
@@ -79,7 +90,16 @@ if submit1:
         st.subheader("The Response is")
         st.write(response)
     else:
-        st.write("Please Upload the Resume")
+        st.write("Please Upload your Resume")
+elif submit2:
+    if uploaded_file is not None:
+        pdf_content = input_pdf_setup(uploaded_file)
+        response = get_gemini_response(input_prompt4, pdf_content, input_text)
+        st.subheader("Missing Words Analysis")
+        st.write(response)
+    else:
+        st.write("Please upload your Resume.")
+
 elif submit3:
     if uploaded_file is not None:
         pdf_content = input_pdf_setup(uploaded_file)
@@ -96,7 +116,7 @@ elif submit4:
         st.subheader("The Response is")
         st.write(response)
     else:
-        st.write("Please Upload the Resume")
+        st.write("Please Upload your Resume")
 
 
     
