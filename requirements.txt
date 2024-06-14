@@ -1,4 +1,4 @@
-heroku buildpacks:add --index 1 heroku-community/apt
+
 streamlit
 google-generativeai
 python-dotenv
