@@ -83,7 +83,7 @@ if submit1:
 elif submit3:
     if uploaded_file is not None:
         pdf_content = input_pdf_setup(uploaded_file)
-        response = get_gemini_response(input_prompt2_enhancement, pdf_content, input_text)
+        response = get_gemini_response(input_prompt2, pdf_content, input_text)
         st.subheader("Resume Enhancement Suggestions")
         st.write(response)
     else:
