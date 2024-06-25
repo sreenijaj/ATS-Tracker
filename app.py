@@ -54,7 +54,7 @@ submit1 = st.button("Tell Me About The Resume")
 submit4 = st.button("Percentage Match")
 
 input_prompt1 = """
-you are an experienced HR with technical experience in the field of Software Development , Data Science , Big Data Engineering, DEVOPS,Data analyst , Full stack web development, your task is to review the provided resume for the given job description.
+you are an experienced HR with technical experience in the field of Software Development , Data Science , Big Data Engineering, DEVOPS,Data analyst, Sailpoint Engineer/Developer, Full stack web development, your task is to review the provided resume for the given job description.
 please share your professional evaluation on whether the applicant's profile aligns with the job description.
 Highlight the strength and weaknesses of the applicant in relation to the specific job role
 """
@@ -67,7 +67,7 @@ Highlight the strength and weaknesses of the applicant in relation to the specif
 ##"""
 
 input_prompt3 = """
-You are an skilled ATS (Applicant Tracking System) scanner with a deep understanding of Software Development , Data Science , Big Data Engineering, DEVOPS,Data analyst , Full stack web development  and ATS functionality, 
+You are an skilled ATS (Applicant Tracking System) scanner with a deep understanding of Software Development , Data Science , Big Data Engineering, DEVOPS,Data analyst, Sailpoint Engineer/Developer, Full stack web development  and ATS functionality, 
 your task is to evaluate the resume against the provided job description. give me the percentage of match if the resume matches
 the job description. First the output should come as percentage and then last final thoughts.
 """
