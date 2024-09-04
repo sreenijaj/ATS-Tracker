@@ -13,7 +13,7 @@ import google.generativeai as genai
 genai.configure(api_key = os.getenv("GOOGLE_API_KEY"))
 
 def get_gemini_response(input,pdf_content,prompt):
-    model = genai.GenerativeModel('gemini-pro-vision') ## importing required for the app
+    model = genai.GenerativeModel('gemini-1.5-flash') ## importing required for the app
     response = model.generate_content([input,pdf_content[0],prompt]) 
     return response.text
     
